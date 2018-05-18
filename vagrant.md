@@ -19,6 +19,17 @@ vagrant up trusty_64
 vagrant ssh trusty_64
 ```
 
+* Install Support for C++17
+
+```
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt-get install -y gcc-7
+sudo apt-get install -y g++-7
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 20
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 20
+```
+
 * Build and Install ATS (Run ldconfig to refresh library module in ubuntu)
 
 ```
