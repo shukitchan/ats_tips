@@ -3,11 +3,9 @@ Setting up ATS Development Environment quickly on Your Mac
 
 * Install virtualbox
 * Install vagrant
-* Install macports
-* Install git through macports and git clone the repostiory
+* Install git and clone the repository
 
 ```
-sudo port install git
 git clone https://github.com/apache/trafficserver.git
 ```
 
@@ -15,8 +13,15 @@ git clone https://github.com/apache/trafficserver.git
 
 ```
 cd trafficserver
-vagrant up trusty_64
-vagrant ssh trusty_64
+vagrant up xenial_64
+vagrant ssh xenial_64
+```
+
+* Install necessary packages
+
+```
+sudo apt-get update
+sudo apt-get install -y autoconf automake build-essential clang libcap-dev libcurl4-openssl-dev libhwloc-dev libpcre3-dev libssl-dev m4 ncurses-dev git luajit libluajit-5.1-dev
 ```
 
 * Install Support for C++17
