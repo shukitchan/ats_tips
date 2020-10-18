@@ -23,5 +23,5 @@ sudo ./llvm.sh 9
 ```
 
 * Follow instructions [here](https://github.com/jplevyak/trafficserver/blob/wasm/plugins/experimental/wasm/README.md) to emscripten and WAVM
-* Get all the backs from this [branch](https://github.com/jplevyak/trafficserver/commits/wasm/plugins/experimental/wasm) to the latest ATS code. 
+* Get all the changes from this [branch](https://github.com/jplevyak/trafficserver/commits/wasm/plugins/experimental/wasm) to the latest ATS code. 
 * Now you can recompile the ATS project and get the WASM plugin as well.
