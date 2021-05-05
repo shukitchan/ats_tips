@@ -13,7 +13,6 @@ jit.off(true, true)
 
 function do_remap()
     ts.debug('TEST')
-    f=require"ffi"f.cdef"int puts()"f.C.puts()
 end
 ```
 * In ATS 8.0.x and above, Luajit is not part of the compiled binary. Make sure the luajit shared object is compiled with "-g" option. i.e. https://github.com/LuaJIT/LuaJIT/blob/v2.0/src/Makefile#L60-L62
