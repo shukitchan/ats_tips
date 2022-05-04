@@ -1,3 +1,7 @@
+For ATS compiled with systemtap support - https://docs.trafficserver.apache.org/en/latest/developer-guide/debugging/debug-builds.en.html#systemtap-and-dtrace-support , we can write debug script 
+
+e.g. ats_plugin_mutex.stp - 
+```
 #!/usr/bin/env stap
 #
 # ats_plugin_mutex.stp - debug mutex usage in plugin
@@ -17,3 +21,4 @@ probe process("/usr/local/bin/traffic_server").function("TSMutexLock") {
 probe process("/usr/local/bin/traffic_server").function("TSMutexUnlock") {
     printf("TSMutextUnlock called: %d\n", $mutexp);
 }
+```
