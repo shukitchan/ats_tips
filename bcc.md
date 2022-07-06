@@ -15,7 +15,7 @@ sudo docker run --rm -it --privileged \
 
 2. Install bcc
 ```
-sudo apk add bcc-tools bcc-doc
+apk add bcc-tools bcc-doc
 ```
 
 3. Turn on xdebug plugin inside `plugin.config` and restart ATS
