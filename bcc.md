@@ -30,7 +30,7 @@ sudo docker exec -it <docker container id> /bin/bash
 /usr/share/bcc/tools/trace ':/opt/ats/bin/traffic_server:TSHttpTxnMilestoneGet "Function called"'
 ```
 
-5. Back to the original terminal, trigger the call to the ATS server and see the traces of the call for retrieving milesotne in the above terminal window
+5. Back to the original terminal, trigger the call to the ATS server and see the traces of the call for retrieving milestone in the above terminal window
 ```
 curl -v -H 'X-Debug: X-Milestones' 'http://localhost:8080/'
 ```
