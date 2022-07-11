@@ -13,9 +13,11 @@ sudo docker run --rm -it --privileged \
   ghcr.io/shukitchan/ats-alpine-devel
 ```
 
-2. Install bcc
+2. Install bcc and bpftrace
 ```
 apk add bcc-tools bcc-doc
+apk add bpftrace
+apk add bpftrace-doc bpftrace-tools bpftrace-tools-doc
 ```
 
 3. Turn on xdebug plugin inside `plugin.config` and restart ATS
@@ -33,4 +35,9 @@ sudo docker exec -it <docker container id> /bin/bash
 5. Back to the original terminal, trigger the call to the ATS server and see the traces of the call for retrieving milestone in the above terminal window
 ```
 curl -v -H 'X-Debug: X-Milestones' 'http://localhost:8080/'
+```
+
+6. Instead of using `bcc`'s trace, you can also use bpftrace
+```
+/usr/bin/bpftrace -e 'u:/opt/ats/bin/traffic_server:TSHttpTxnMilestoneGet { printf("Function called\n"); }'
 ```
