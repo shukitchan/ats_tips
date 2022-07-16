@@ -1,5 +1,5 @@
-Setting up ATS Development Environment quickly on Your Mac
-==========================================================
+(Moved to [ats-alpine](https://github.com/shukitchan/ats-alpine)) Setting up ATS Development Environment quickly on Your Mac
+============================================================================================================================
 
 * Install virtualbox
 * Install vagrant
