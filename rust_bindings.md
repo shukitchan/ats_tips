@@ -1,4 +1,4 @@
-Rust bindings for TrafficServer - https://github.com/netlify/trafficserver_rs
+(Moved to [ATS wasm plugin](https://github.com/apache/trafficserver/tree/master/plugins/experimental/wasm)) Rust bindings for TrafficServer - https://github.com/netlify/trafficserver_rs
 
 ```
 git clone https://github.com/netlify/trafficserver_rs
