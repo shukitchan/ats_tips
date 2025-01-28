@@ -1,7 +1,7 @@
 Detecting Dead Code in Lua
 ==========================
 
-We can run luacov (https://github.com/lunarmodules/luacov) in production in a extremely small percentage over a long time and retrieve the code coverage information. 
+We can run luacov (https://github.com/lunarmodules/luacov) in production in over a period of time and retrieve the code coverage information. 
 This will then show the code that never gets run (i.e. dead code)
 These are potential candidates to be removed as tech debt.
 
@@ -44,3 +44,6 @@ function do_remap()
 end
 
 ```
+We can then run `luacov` in `/tmp/` directory to retrieve the output and see which lines of code were never executed.
+
+* However, this may be very inefficient for the code running in production and we may need a way to turn off luacov in runtime and only allow it to run in a very small percentage of the time. 
